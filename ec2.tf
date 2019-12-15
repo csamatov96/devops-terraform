@@ -9,7 +9,12 @@ resource "aws_instance" "ec2_instance" {
     
     count = 2 
 
-    lifecycle {
+    lifecycle { #Resource aws_instance.ec2_instance[0] has lifecycle.prevent_destroy set, but
+                #the plan calls for this resource to be destroyed. To avoid this error and
+                #continue with the plan, either disable lifecycle.prevent_destroy or reduce the
+                #scope of the plan using the -target flag.
         prevent_destroy = true 
     }
+
+    key_name = "myMac"
 }
