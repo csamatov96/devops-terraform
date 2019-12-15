@@ -21,7 +21,12 @@ resource "aws_instance" "ec2_instance" {
     #security_groups = ["sg-0670d5ce720b78043", "sg-d399afa6"] #list multiple sec groups u got 
 
     root_block_device {
-        volume_size = 30 #EBS
+        volume_size = 30 #root storage
+    }
+
+    ebs_block_device { #ebs 
+        device_name = "storage"
+        volume_size = 10 
     }
 
     tags = { #= sign 
