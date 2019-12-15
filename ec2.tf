@@ -13,7 +13,7 @@ resource "aws_instance" "ec2_instance" {
                 #the plan calls for this resource to be destroyed. To avoid this error and
                 #continue with the plan, either disable lifecycle.prevent_destroy or reduce the
                 #scope of the plan using the -target flag.
-        prevent_destroy = true 
+        prevent_destroy = false 
     }
 
     key_name = "myMac"
