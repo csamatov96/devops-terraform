@@ -18,7 +18,7 @@ resource "aws_instance" "ec2_instance" {
 
     key_name = "myMac"
 
-    security_groups = ["sg-0670d5ce720b78043", "sg-d399afa6"] #list multiple sec groups u got 
+    #security_groups = ["sg-0670d5ce720b78043", "sg-d399afa6"] #list multiple sec groups u got 
 
     root_block_device {
         volume_size = 30 #EBS
