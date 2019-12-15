@@ -23,4 +23,8 @@ resource "aws_instance" "ec2_instance" {
     root_block_device {
         volume_size = 30 #EBS
     }
+
+    tags {
+        server = "web"
+    }
 }
