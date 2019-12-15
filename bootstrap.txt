@@ -1,0 +1,7 @@
+yum install httpd -y
+yum install telnet -y
+yum install lftp -y
+
+echo "hello world" >> /var/www/html/index.html
+systemctl start http
+

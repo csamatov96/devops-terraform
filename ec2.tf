@@ -27,4 +27,6 @@ resource "aws_instance" "ec2_instance" {
     tags = { #= sign 
         server = "web"
     }
+
+    user_data = "${file("bootstrap.txt")}"
 }
