@@ -28,5 +28,5 @@ resource "aws_instance" "ec2_instance" {
         server = "web"
     }
 
-    user_data = "file("bootstrap.txt")"
+    user_data = file("bootstrap.txt")
 }
