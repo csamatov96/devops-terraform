@@ -1,4 +1,4 @@
-resource "aws_iam_user" "terraform_developer" {
-    name = "terraform_developer"
+resource "aws_iam_user" "iam_user" {
+    name = "sawyer_developer"
   
 }

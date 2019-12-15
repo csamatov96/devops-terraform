@@ -2,7 +2,7 @@ resource "aws_instance" "ec2_instance" {
     ami = "ami-01f14919ba412de34"
     instance_type = "t2.micro"    
     associate_public_ip_address = "true"
-    monitoring = true #detailed monitoring 
+    monitoring = true #detailed cloudwatch monitoring 
     count = 2 
     lifecycle { #Resource aws_instance.ec2_instance[0] has lifecycle.prevent_destroy set, but
                 #the plan calls for this resource to be destroyed. To avoid this error and
