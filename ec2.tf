@@ -17,4 +17,6 @@ resource "aws_instance" "ec2_instance" {
     }
 
     key_name = "myMac"
+
+    security_groups = ["sg-d399afa6"] #list multiple sec groups u got 
 }
