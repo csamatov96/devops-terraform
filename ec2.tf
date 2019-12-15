@@ -24,9 +24,10 @@ resource "aws_instance" "ec2_instance" {
         volume_size = 30 #root storage
     }
 
-    ebs_block_device { #ebs 
-        volume_size = 10 
-    }
+    #ebs_block_device { #ebs 
+    #    device_name = "" ????
+    #    volume_size = 10 
+    #}
 
     tags = { #= sign 
         server = "web"
